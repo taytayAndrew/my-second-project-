@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="字体文件/svg_22673_1.2dff6127ca8efabd12a0be3ac08829cd.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font: 16px/1.4 "PingFang SC", "Microsoft YaHei", "Arial";
+        }
+
+        header {
+            padding: 10px;
+        }
+
+        .button {
+            line-height: 52px;
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+            background-color: #fff;
+            border: none;
+            border-radius: 6px;
+            box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+            width: 200px;
+        }
+        .button.button-theme:hover {
+            width: 230px;
+            cursor: pointer;
+            transition: all .3s;
+        }
+        .button.button-default:hover {
+            width: 220px;
+            cursor: pointer;
+            transition: all .3s;
+
+        }
+
+        .button.button-theme {
+            background-color: rgb(37, 216, 177);
+            color: #fff;
+
+        }
+
+        section.hero .btns {
+            margin-top: 80px;
+        }
+
+        .outlayer {
+            max-width: 1200px;
+            /*设置最大值 可以在网页拉伸后，不改变样式*/
+            padding: 0 50px;
+            /*优化作用，屏幕在缩小的时候不会贴边*/
+            margin: 0 auto;
+        }
+
+        .logo {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color: rgb(37, 216, 177);
+        }
+
+        .logo .icon {
+            width: 52px;
+            height: 52px;
+        }
+
+        .logo .title {
+            font-size: 35px;
+            margin-left: 10px;
+            font-weight: 200;
+        }
+
+        section.hero {
+            display: flex;
+            /* align-items: center; */
+        }
+
+        section.hero .text {
+            width: 470px;
+            margin-right: 60px;
+            padding-bottom: 27px;
+        }
+
+        section.hero h1 {
+            margin-top: 138px;
+            color: #343434;
+            font-size: 46px;
+            font-weight: 600;
+
+        }
+
+        section.hero .img {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        section.hero p {
+            margin-top: 42px;
+            font-size: 24px;
+            color: #868686;
+
+        }
+
+        section.hero .img>img {
+            width: 100%;
+            border-radius: 6px;
+
+
+        }
+
+        section.intro {
+            background-color: rgb(218, 253, 218);
+            padding: 60px 0;
+        }
+
+        section.intro .second-title {
+            text-align: center;
+            font-size: 20px;
+            color: rgb(37, 216, 177);
+        }
+
+        section.intro .title {
+            text-align: center;
+            font-size: 30px;
+            color: rgb(0, 0, 0);
+            margin-top: 30px;
+        }
+
+        section.intro .text {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            margin-top: 15px;
+        }
+
+        section.intro .panel-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 30x;
+
+        }
+
+        .panel-container .panel {
+            width: calc(33.3% - 10px);
+            /*注意此时加减要留有空隙*/
+            display: flex;
+            margin-right: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 10px;
+            margin-top: 10px;
+
+        }
+
+        section.intro .panel .iconpark-icon {
+            color: rgb(37, 216, 177);
+            width: 30px;
+            height: 30px;
+        }
+
+        section.intro .panel .detail {
+            flex: 1;
+            margin-left: 10px;
+
+        }
+
+        section.intro .panel .detail p {
+            color: #666;
+            margin-top: 10px;
+        }
+
+        section.detail {
+            display: flex;
+            /*方便左右排列*/
+            padding-top: 60px;
+            padding-bottom: 60px;
+            /*需要注意在这里要加入上下padding的话 需要注意如果直接设置padding: 20px 0就会将outlayer的左右padding给覆盖掉*/
+
+        }
+
+        section.detail .text {
+            flex: 1;
+            /*让其充当撑满盒子的东西*/
+            display: flex;
+            /*上面flex=1不干扰.text为flex布局 其次flex布局是为了方便与文字部分的上下和居中排列*/
+            justify-content: center;
+            flex-direction: column;
+            margin-right: 60px;
+        }
+
+        section.detail img {
+            width: 100%;
+            /*意为让图片撑满图片盒子*/
+        }
+
+        section.detail .img {
+            width: 550px;
+            /*给图片盒子设置固定宽度*/
+            display: flex;
+            align-items: center;
+            /*让图片盒子中的图片居中显示*/
+        }
+
+        section.detail h1 {
+            font-size: 36px;
+        }
+
+        section.detail p {
+            font-size: 24px;
+            color: #666;
+            margin-top: 30px;
+        }
+
+
+        section.download {
+            background: linear-gradient(to right, rgb(132, 229, 132), rgb(240, 240, 110));
+            padding: 50px 0;
+        }
+
+        section.download .title {
+            color: #fff;
+            text-align: center;
+            font-size: 50px;
+        }
+
+        section.download .second-title {
+            color: #fff;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        section.download .option {
+            display: flex;
+            margin-top: 100px;
+            flex-wrap: wrap;
+        }
+
+        section.download .each-option {
+            background-color: #fff;
+            font-weight: 800;
+            width: calc(20% - 10px);
+            margin-left: 10px;
+            border-radius: 6px;
+            display: flex;
+            cursor: pointer;
+
+
+
+        }
+
+        section.download .iconpark-icon {
+            width: 30px;
+            height: 30px;
+
+        }
+
+        section.download .each-option .go-to {
+            display: flex;
+        }
+
+        section.download .each-option .all {
+            padding: 20px;
+            text-align: center;
+           
+
+        }
+
+        section.download .each-option .all-logo {
+
+            display: flex;
+            align-items: center;
+            margin-left: 25px;
+            
+
+        }
+
+        section.download .each-option span {
+            margin-left: 5px;
+            font-weight: 400;
+            
+
+        }
+
+        section.download .each-option h4 {
+            font-size: 10px;
+            margin-top: 10px;
+            width: 100px;
+            margin-left: 20px;
+            transition: all .5s;
+           
+
+        }
+
+        section.download .each-option h4:hover {
+            cursor: pointer;
+            border: 0 solid #fff;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            background-color: rgb(37, 216, 177);
+
+
+        }
+
+        @media(max-width: 1000px) {
+
+            /*响应式*/
+            section.download span,
+            h4 {
+                font-weight: 300;
+            }
+
+            section.download .option .each-option {
+                width: calc(33.3% - 10px);
+                margin-bottom: 20px;
+               
+
+            }
+
+            section.download .each-option .iconpark-icon {
+                width: 25px;
+                height: 25px;
+
+            }
+
+            section.hero .text {
+                width: 300px;
+                margin-right: 40px;
+                padding-bottom: 20px;
+            }
+
+            section.hero h1 {
+                margin-top: 90px;
+                font-size: 30px;
+
+
+            }
+
+            section.hero p {
+                margin-top: 30px;
+                font-size: 18px;
+                color: #868686;
+
+            }
+
+            .button-default {
+                width: 140px;
+                padding: 0 20px;
+
+            }
+
+            section.detail .img {
+                width: 400px;
+
+            }
+
+
+        }
+
+        @media(max-width: 650px) {
+
+            section.download .option {
+                flex-direction: column;
+                /*注意设置flex的布局方式flex-decoration是设置在父盒子上面的*/
+
+            }
+
+            section.download .option .each-option {
+                width: 50%;
+                margin-left: 100px;
+                
+            }
+
+            section.hero {
+                flex-direction: column;
+            }
+
+            section.hero h1 {
+                margin-top: 30px;
+            }
+
+            section.hero .btns {
+                margin-top: 10px;
+            }
+
+            section.hero .img {
+                margin-top: 30px;
+            }
+
+            section.intro .panel {
+                width: calc(50% - 10px);
+                /*用这种方式设置宽度便于盒子随着浏览器的宽度变化而变化*/
+
+            }
+
+            section.detail {
+                display: flex;
+                flex-direction: column;
+
+
+            }
+
+            section.detail .text {
+                padding-bottom: 30px;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <header class="outlayer">
+        <a href="" class="logo">
+            <svg class="icon iconpark-icon">
+                <use href="#cat"></use>
+            </svg>
+            <span class="title">起始页</span>
+        </a>
+    </header>
+    <section class="hero outlayer">
+        <div class="text">
+            <h1>简洁，美观，实用的浏览器起始页</h1>
+            <p>全平台兼容，即开即用</p>
+            <div class="btns">
+                <button class="button button-theme">开始下载</button>
+                <button class="button button-default">安装拓展</button>
+            </div>
+        </div>
+        <div class="img">
+            <img src="img/R-C (3).jfif" alt="k1">
+        </div>
+    </section>
+    <section class="intro">
+        <div class="outlayer">
+            <h4 class="second-title">功能</h4>
+            <h1 class="title">化繁为简</h1>
+            <p class="text">为了让您看到更多的猫猫</p>
+            <div class="panel-container">
+                <div class="panel">
+                    <svg class="icon iconpark-icon">
+                        <use href="#search"></use>
+                    </svg>
+                    <div class="detail">
+                        <h4>搜索</h4>
+                        <p>使用您喜欢的任意猫猫类型，开启网上冲浪之旅</p>
+                    </div>
+                </div>
+                <div class="panel">
+                    <svg class="icon iconpark-icon">
+                        <use href="#web-page"></use>
+                    </svg>
+                    <div class="detail">
+                        <h4>网站捷径</h4>
+                        <p>添加您的常用猫猫喜好，一键快捷访问</p>
+                    </div>
+                </div>
+                <div class="panel">
+                    <svg class="icon iconpark-icon">
+                        <use href="#notebook-one"></use>
+                    </svg>
+                    <div class="detail">
+                        <h4>便签</h4>
+                        <p>随时记录您的灵感，待办事项和备忘录清单</p>
+                    </div>
+                </div>
+                <div class="panel">
+                    <svg class="icon iconpark-icon">
+                        <use href="#pic"></use>
+                    </svg>
+                    <div class="detail">
+                        <h4>壁纸</h4>
+                        <p>将您喜欢的任意猫猫设为壁纸，或使用精选的动态/每日壁纸</p>
+                    </div>
+                </div>
+                <div class="panel">
+                    <svg class="icon iconpark-icon">
+                        <use href="#stickers"></use>
+                    </svg>
+                    <div class="detail">
+                        <h4>随心自定义</h4>
+                        <p>1000+个性化设置，打造专属与您的猫猫照片
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <section class="detail outlayer">
+        <div class="text">
+            <h1>全能搜索框</h1>
+            <p>支持任何猫猫品种 / 一件翻译搜索内容 / 一键直达常用软件 / 输入算式直接计算 —————— 祝你事半功倍</p>
+        </div>
+        <div class="img"><img src="img/R-C.jfif" alt=""></div>
+    </section>
+    <section class="detail outlayer">
+
+        <div class="img"><img src="img/0137a95df0d9eda8012097b3c21df2.jpg@2o.jpg" alt=""></div>
+        <div class="text">
+            <h1>全能搜索框</h1>
+            <p>支持任何猫猫品种 / 一件翻译搜索内容 / 一键直达常用软件 / 输入算式直接计算 —————— 祝你事半功倍</p>
+        </div>
+    </section>
+    <section class="detail outlayer">
+        <div class="text">
+            <h1>全能搜索框</h1>
+            <p>支持任何猫猫品种 / 一件翻译搜索内容 / 一键直达常用软件 / 输入算式直接计算 —————— 祝你事半功倍</p>
+        </div>
+        <div class="img"><img src="img/01af215df0d9eca801219cce8ebc2a.jpg@2o.jpg" alt=""></div>
+    </section>
+    <section class="download">
+        <div class="outlayer">
+            <h1 class="title">现在开始, 定义猫猫 ！</h1>
+            <p class="second-title">完全免费 纯净无广告 即开即用</p>
+            <div class="option">
+                <div class="each-option">
+                    <div class="all">
+                        <div class="all-logo">
+                            <svg class="iconpark-icon">
+                                <use href="#apple"></use>
+                            </svg>
+                            <span>苹果版</span>
+                        </div>
+
+                        <div class="go-to">
+                            <h4>前往体验</h4>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="each-option">
+                    <div class="all">
+                        <div class="all-logo">
+                            <svg class="iconpark-icon">
+                                <use href="#browser-safari"></use>
+                            </svg>
+                            <span>safric版</span>
+                        </div>
+
+                        <div class="go-to">
+                            <h4>开始使用</h4>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="each-option">
+                    <div class="all">
+                        <div class="all-logo">
+                            <svg class="iconpark-icon">
+                                <use href="#google"></use>
+                            </svg>
+                            <span>google</span>
+                        </div>
+
+                        <div class="go-to">
+                            <h4> 前往安装</h4>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="each-option">
+                    <div class="all">
+                        <div class="all-logo">
+                            <svg class="iconpark-icon">
+                                <use href="#windows"></use>
+                            </svg>
+                            <span>win浏览</span>
+                        </div>
+
+                        <div class="go-to">
+                            <h4>前往下载</h4>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="each-option">
+                    <div class="all">
+                        <div class="all-logo">
+                            <svg class="iconpark-icon">
+                                <use href="#youtobe"></use>
+                            </svg>
+                            <span>youtb观看</span>
+                        </div>
+
+                        <div class="go-to">
+                            <h4>前往观看</h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about outlayer">
+        <div class="aboutus">
+            <h2>关注我们</h2>
+            <span>想要率先知道我们起始页的开发动态？
+            </span>
+            <span>欢迎关注开发者的社交媒体账号！</span>
+        </div>
+        <div class="infor"></div>
+    </section>
+    <footer></footer>
+</body>
+
+</html>
